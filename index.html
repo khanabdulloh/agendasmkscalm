@@ -1,11 +1,19 @@
-<!-- ===== AGENDA SMK CALM v2 — tempel ke Halaman Blogger (Tampilan HTML) ===== -->
+<!-- ===== AGENDA TAHUNAN SMK CALM v3 — tempel ke Halaman Blogger (Tampilan HTML) ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 .cx{--n:#0b3d91;--nd:#082c69;--g:#c99a06;--ink:#0f1b33;--mu:#6a7590;--ln:#e6eaf2;--bg:#f7f9fc;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);max-width:1040px;margin:0 auto;padding:8px 18px 56px;line-height:1.6;box-sizing:border-box}
 .cx *{box-sizing:border-box;font-family:inherit}
-.cx-top{padding:44px 0 28px;border-bottom:1px solid var(--ln)}
+.cx-br{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--ln)}
+.cx-id{display:flex;align-items:center;gap:14px}
+.cx-id img{width:54px;height:54px;object-fit:contain}
+.cx-id b{display:block;font-size:17px;font-weight:800;color:var(--n);line-height:1.2}
+.cx-id span{font-size:12px;color:var(--mu);letter-spacing:.04em}
+.cx-lang{display:flex;border:1px solid var(--ln);border-radius:99px;padding:3px;background:#fff}
+.cx-lang button{border:0;background:transparent;color:var(--mu);padding:5px 14px;border-radius:99px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}
+.cx-lang button.on{background:var(--n);color:#fff}
+.cx-top{padding:40px 0 28px;border-bottom:1px solid var(--ln)}
 .cx-ey{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g)}
 .cx-top h2{font-size:clamp(28px,5vw,44px);font-weight:300;letter-spacing:-.02em;line-height:1.15;margin:10px 0 12px;color:var(--ink)}
 .cx-top h2 b{font-weight:800;color:var(--n)}
@@ -32,7 +40,7 @@
 .cx-mo>h4{margin:0;position:sticky;top:64px;align-self:start;font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
 .cx-mo>h4 small{display:block;font-size:12px;font-weight:500;color:var(--mu);letter-spacing:0}
 .cx-mo.now>h4{color:var(--n)}
-.cx-mo.now>h4:after{content:"Bulan ini";display:block;width:max-content;margin-top:6px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#fdf3d0;color:#7a5c00;padding:2px 10px;border-radius:99px}
+.cx-mo>h4 em{display:block;width:max-content;margin-top:6px;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#fdf3d0;color:#7a5c00;padding:2px 10px;border-radius:99px}
 .cx-e{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:0 0 26px}
 .cx-d{text-align:center;border:1px solid var(--ln);border-radius:14px;padding:8px 0;align-self:start;background:#fff}
 .cx-d b{display:block;font-size:22px;font-weight:800;line-height:1.1;color:var(--n)}.cx-d span{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
@@ -56,32 +64,37 @@
 </style>
 
 <div class="cx" id="cx">
+  <div class="cx-br">
+    <div class="cx-id">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s160/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png" alt="Logo SMK Ciledug Al-Musaddadiyah">
+      <div><b>SMK Ciledug Al-Musaddadiyah</b><span>CALM · Garut, Jawa Barat</span></div>
+    </div>
+    <div class="cx-lang" id="cxLg"><button data-l="0" class="on">ID</button><button data-l="1">EN</button></div>
+  </div>
+
   <header class="cx-top">
-    <span class="cx-ey">Tahun Pelajaran 2026/2027</span>
-    <h2>Agenda <b>SMK Ciledug Al-Musaddadiyah</b></h2>
-    <p>Kalender kegiatan sekolah selama satu tahun, mulai dari penerimaan murid baru, MPLS, rapat orang tua, sumatif, hingga pelepasan lulusan.</p>
+    <span class="cx-ey" id="cxEy"></span>
+    <h2 id="cxH"></h2>
+    <p id="cxP"></p>
     <div class="cx-st" id="cxS"></div>
   </header>
 
   <div class="cx-nx" id="cxN"></div>
 
-  <div class="cx-h">Agenda Rutin</div>
+  <div class="cx-h" id="cxH1"></div>
   <div class="cx-rt" id="cxR"></div>
 
-  <div class="cx-h">Kalender Tahunan</div>
-  <div class="cx-bar">
-    <div class="cx-pl" id="cxC"></div>
-    <div class="cx-pl" id="cxM"></div>
-  </div>
+  <div class="cx-h" id="cxH2"></div>
+  <div class="cx-bar"><div class="cx-pl" id="cxC"></div><div class="cx-pl" id="cxM"></div></div>
   <div id="cxL"></div>
   <div class="cx-lg" id="cxG"></div>
 
-  <div class="cx-nt">Tanggal bersifat perkiraan dan mengikuti kalender pendidikan. Jadwal pasti dapat berubah dan diumumkan melalui website serta kanal resmi sekolah.</div>
+  <div class="cx-nt" id="cxNt"></div>
 
   <div class="cx-ct">
-    <div><b>Ada pertanyaan seputar agenda?</b><p>Layanan informasi: Senin–Jumat, 07.00–16.00 WIB.</p></div>
+    <div><b id="cxT1"></b><p id="cxT2"></p></div>
     <div>
-      <a class="cx-a1" href="https://www.smkciledugalmusaddadiyah.sch.id/p/ppdb-online-smk-ciledug-al-musaddadiyah.html">Daftar SPMB 2027/2028</a>
+      <a class="cx-a1" id="cxA1" href="https://www.smkciledugalmusaddadiyah.sch.id/p/ppdb-online-smk-ciledug-al-musaddadiyah.html"></a>
       <a class="cx-a2" href="https://wa.me/6287856681523?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20agenda%20sekolah">WhatsApp</a>
     </div>
   </div>
@@ -89,96 +102,124 @@
 
 <script>
 (function(){
-var CAT={akademik:['Akademik','#0b3d91'],penerimaan:['Penerimaan (SPMB)','#c99a06'],ortu:['Orang Tua','#1f9d6b'],kegiatan:['Kegiatan Siswa','#7a4fd1'],nasional:['Hari Besar','#d0524a']};
+var L=0,fc='all',fs='all',$=function(i){return document.getElementById(i)};
+var U={
+ey:['Agenda Tahunan Rutin Sekolah','Annual School Calendar'],
+h:['Kegiatan Sekolah <b>Sepanjang Tahun</b>','School Activities <b>Throughout the Year</b>'],
+p:['Rangkaian kegiatan rutin yang berulang setiap tahun, mulai dari penerimaan murid baru, MPLS, rapat orang tua, sumatif, hingga pelepasan lulusan.','Our recurring yearly activities, from new student admissions, orientation, and parent meetings to assessments and graduation.'],
+s:[['Agenda tahunan','Yearly events'],['Agenda akademik','Academic events'],['Pertemuan orang tua','Parent meetings'],['Tahap SPMB','Admissions stages']],
+nx:['Agenda terdekat','Up next'],run:['Sedang berlangsung','Happening now'],today:['Hari ini','Today'],act:['agenda aktif','ongoing'],dl:['hari lagi','days to go'],
+h1:['Agenda Rutin','Regular Schedule'],h2:['Kalender Tahunan','Annual Calendar'],
+all:['Semua','All'],yr:['Setahun','Full Year'],od:['Ganjil','Odd Sem.'],ev:['Genap','Even Sem.'],
+so:['Semester Ganjil','Odd Semester'],se:['Semester Genap','Even Semester'],
+b1:['Berlangsung','Ongoing'],b2:['Segera','Soon'],b3:['Selesai','Done'],nw:['Bulan ini','This month'],to:['s/d','to'],
+em:['Tidak ada agenda untuk filter ini.','No events match this filter.'],
+nt:['Tanggal bersifat perkiraan dan berulang setiap tahun mengikuti kalender pendidikan. Hari besar keagamaan menyesuaikan kalender Hijriah dan penetapan pemerintah. Jadwal pasti diumumkan melalui website dan kanal resmi sekolah.','Dates are approximate and repeat every year following the education calendar. Religious holidays follow the Hijri calendar and government decisions. Exact schedules are announced on the school website and official channels.'],
+t1:['Ada pertanyaan seputar agenda?','Questions about the calendar?'],t2:['Layanan informasi: Senin–Jumat, 07.00–16.00 WIB.','Information desk: Monday–Friday, 07:00–16:00 WIB.'],a1:['Daftar SPMB','Apply (SPMB)']
+};
+var CAT={akademik:[['Akademik','Academic'],'#0b3d91'],penerimaan:[['Penerimaan (SPMB)','Admissions (SPMB)'],'#c99a06'],ortu:[['Orang Tua','Parents'],'#1f9d6b'],kegiatan:[['Kegiatan Siswa','Student Life'],'#7a4fd1'],nasional:[['Hari Besar','Holidays'],'#d0524a']};
+var LC={fld:['Lapangan Sekolah','School Field'],hall:['Aula Sekolah','School Hall'],fh:['Lapangan & Aula','Field & Hall'],all:['Seluruh Kelas','All Classes'],cls:['Ruang Kelas','Classrooms'],mos:['Masjid / Aula','Mosque / Hall'],cm:['Kelas Masing-masing','Respective Classes'],cmp:['Lingkungan Sekolah','School Campus'],smp:['SMP/MTs Sekitar Garut','Nearby Junior High Schools'],onl:['Online & Sekretariat','Online & Secretariat'],lab:['Lab & Bengkel','Labs & Workshops'],exr:['Ruang Ujian','Exam Rooms'],dudi:['Mitra DUDI','Industry Partners'],sec:['Sekretariat SPMB','Admissions Office'],hall2:['Aula / Gedung Baru','Hall / New Building'],none:['-','-']};
+var PC={wk:['Waka Kesiswaan','Vice Principal, Student Affairs'],wc:['Waka Kurikulum','Vice Principal, Curriculum'],ks:['Kesiswaan','Student Affairs'],os:['OSIS & Kesiswaan','Student Council & Student Affairs'],kep:['Kepala Sekolah','Principal'],agm:['Bidang Keagamaan','Religious Affairs'],pjok:['Guru PJOK','PE Teachers'],osis:['OSIS','Student Council'],wali:['Wali Kelas','Homeroom Teachers'],spmb:['Panitia SPMB','Admissions Committee'],yay:['Yayasan & Kepala Sekolah','Foundation & Principal'],kap:['Kepala Program Keahlian','Heads of Skill Programs'],uj:['Panitia Ujian','Exam Committee'],hum:['Humas & Hubin','Public Relations & Industry Liaison'],wis:['Panitia Wisuda','Graduation Committee'],none:['-','-']};
 var RT=[
-['Senin','07.00 WIB','Upacara Bendera','Penanaman disiplin, nasionalisme, dan karakter. Lapangan sekolah, dikoordinasi Kesiswaan.'],
-['Senin–Kamis','07.15–15.30','Pembelajaran &amp; Praktik Kejuruan','Teori di kelas dan praktik di laboratorium atau bengkel sesuai program keahlian.'],
-['Jumat','06.45 WIB','Jumat Berkah &amp; Pembiasaan','Kegiatan keagamaan, berbagi, dan penguatan nilai spiritual bersama guru BK dan PAI.'],
-['Setiap Hari','Pagi','Literasi &amp; Presensi Digital','Pembiasaan literasi 15 menit dan pencatatan kehadiran siswa serta guru secara digital.'],
-['Pekanan','Sepulang sekolah','Ekstrakurikuler','Pengembangan minat, bakat, dan kepemimpinan di bawah pembina masing-masing.'],
-['Bulanan','Jadwal internal','Rapat Dewan Guru','Evaluasi pembelajaran, kesiswaan, kurikulum, dan program kerja sekolah.']
+[['Senin','Monday'],['07.00 WIB','07:00 WIB'],['Upacara Bendera','Flag Ceremony'],['Penanaman disiplin, nasionalisme, dan karakter di lapangan sekolah, dikoordinasi Kesiswaan.','Building discipline, nationalism, and character on the school field, coordinated by Student Affairs.']],
+[['Senin–Kamis','Monday–Thursday'],['07.15–15.30','07:15–15:30'],['Pembelajaran & Praktik Kejuruan','Classes & Vocational Practice'],['Teori di kelas dan praktik di laboratorium atau bengkel sesuai program keahlian.','Classroom theory and hands-on practice in labs or workshops for each skill program.']],
+[['Jumat','Friday'],['06.45 WIB','06:45 WIB'],['Jumat Berkah & Pembiasaan','Blessed Friday & Daily Habits'],['Kegiatan keagamaan, berbagi, dan penguatan nilai spiritual bersama guru BK dan PAI.','Religious activities, sharing, and spiritual values with counseling and Islamic studies teachers.']],
+[['Setiap Hari','Every Day'],['Pagi','Morning'],['Literasi & Presensi Digital','Literacy & Digital Attendance'],['Pembiasaan literasi 15 menit dan pencatatan kehadiran siswa serta guru secara digital.','A 15-minute literacy habit and digital attendance for students and teachers.']],
+[['Pekanan','Weekly'],['Sepulang sekolah','After school'],['Ekstrakurikuler','Extracurriculars'],['Pengembangan minat, bakat, dan kepemimpinan di bawah pembina masing-masing.','Interests, talents, and leadership guided by each club advisor.']],
+[['Bulanan','Monthly'],['Jadwal internal','Internal schedule'],['Rapat Dewan Guru','Teachers\' Council Meeting'],['Evaluasi pembelajaran, kesiswaan, kurikulum, dan program kerja sekolah.','Review of teaching, student affairs, curriculum, and school work plans.']]
 ];
-/* [mulai, selesai|'', kategori, judul, deskripsi, lokasi, penanggung jawab] */
+/* [mulai MM-DD, selesai MM-DD, kategori, judul, deskripsi, lokasi, PJ] */
 var EV=[
-['2026-07-13','2026-07-15','kegiatan','MPLS Siswa Baru Kelas X','Pengenalan lingkungan sekolah, program keahlian, tata tertib, dan budaya CALM bagi peserta didik baru.','Lapangan &amp; Aula','Waka Kesiswaan'],
-['2026-07-16','','akademik','Hari Pertama Tahun Pelajaran Baru','Awal kegiatan belajar mengajar semester ganjil seluruh kelas X, XI, dan XII.','Seluruh Kelas','Waka Kurikulum'],
-['2026-07-18','','ortu','Pertemuan Orang Tua Siswa Baru','Sosialisasi program sekolah, tata tertib, dan perkenalan dengan wali kelas.','Aula Sekolah','Waka Kesiswaan'],
-['2026-08-14','2026-08-17','nasional','Peringatan HUT Kemerdekaan RI','Lomba antarkelas dan upacara bendera 17 Agustus.','Lapangan Sekolah','OSIS &amp; Kesiswaan'],
-['2026-08-22','','ortu','Rapat Orang Tua &amp; Komite Sekolah','Penyampaian program kerja, anggaran, dan kesepakatan bersama tahun pelajaran.','Aula Sekolah','Kepala Sekolah'],
-['2026-08-25','','nasional','Peringatan Maulid Nabi Muhammad SAW','Tabligh akbar dan kegiatan keagamaan bersama seluruh warga sekolah.','Masjid / Aula','Bidang Keagamaan'],
-['2026-09-09','','nasional','Hari Olahraga Nasional','Senam bersama dan pertandingan persahabatan antarkelas.','Lapangan Sekolah','Guru PJOK'],
-['2026-10-01','2026-10-05','nasional','Kesaktian Pancasila, Hari Batik &amp; Hari Guru Sedunia','Peringatan tanggal 1, 2, dan 5 Oktober dengan upacara dan kegiatan karakter.','Lingkungan Sekolah','Kesiswaan'],
-['2026-10-22','','nasional','Peringatan Hari Santri','Apel dan kegiatan keagamaan sesuai nilai Yayasan Al-Musaddadiyah.','Lapangan Sekolah','Bidang Keagamaan'],
-['2026-10-26','2026-11-06','akademik','Sumatif Tengah Semester Ganjil','Penilaian capaian belajar pertengahan semester untuk seluruh tingkat.','Ruang Kelas','Waka Kurikulum'],
-['2026-10-28','','nasional','Hari Sumpah Pemuda','Upacara dan pentas kreativitas siswa.','Lapangan Sekolah','OSIS'],
-['2026-11-10','','nasional','Peringatan Hari Pahlawan','Upacara dan refleksi nilai perjuangan.','Lapangan Sekolah','Kesiswaan'],
-['2026-11-14','','ortu','Laporan Hasil Sumatif Tengah Semester','Informasi perkembangan belajar siswa kepada orang tua dan wali.','Kelas Masing-masing','Wali Kelas'],
-['2026-11-16','2026-12-18','penerimaan','Sosialisasi SPMB 2027/2028','Kunjungan ke SMP/MTs dan promosi program keahlian. Daftar tunggu dibuka.','SMP/MTs Sekitar Garut','Panitia SPMB'],
-['2026-11-25','','nasional','Hari Guru Nasional','Penghormatan dan apresiasi kepada para guru.','Lapangan Sekolah','OSIS'],
-['2026-12-07','2026-12-18','akademik','Sumatif Akhir Semester Ganjil','Penilaian akhir semester ganjil seluruh mata pelajaran.','Ruang Kelas','Waka Kurikulum'],
-['2026-12-19','','ortu','Pembagian Rapor Semester Ganjil','Penyerahan rapor dan pertemuan wali kelas dengan orang tua.','Kelas Masing-masing','Wali Kelas'],
-['2026-12-21','2026-12-23','kegiatan','Class Meeting &amp; Pentas Karya','Lomba, pameran karya jurusan, dan penampilan seni.','Lapangan &amp; Aula','OSIS &amp; Kesiswaan'],
-['2026-12-26','2027-01-03','akademik','Libur Semester Ganjil','Libur pergantian semester.','-','-'],
-['2027-01-04','','akademik','Awal Semester Genap','Dimulainya kembali pembelajaran semester genap.','Seluruh Kelas','Waka Kurikulum'],
-['2027-01-11','2027-03-26','penerimaan','Pendaftaran SPMB 2027/2028 Gelombang 1','Pendaftaran online gratis. Calon siswa dari daftar tunggu mendapat prioritas.','Online &amp; Sekretariat','Panitia SPMB'],
-['2027-01-16','','nasional','Peringatan Isra Mi\'raj','Kajian dan pembiasaan ibadah (tanggal menyesuaikan kalender Hijriah).','Masjid / Aula','Bidang Keagamaan'],
-['2027-02-08','2027-03-05','kegiatan','Pesantren Ramadan','Tadarus, kajian, dan berbagi takjil (menyesuaikan penetapan awal Ramadan).','Masjid / Aula','Bidang Keagamaan'],
-['2027-03-08','2027-03-16','akademik','Libur Idulfitri','Libur hari raya (menyesuaikan penetapan pemerintah).','-','-'],
-['2027-03-22','2027-04-02','akademik','Sumatif Tengah Semester Genap','Penilaian capaian belajar pertengahan semester genap.','Ruang Kelas','Waka Kurikulum'],
-['2027-04-05','','kegiatan','Halalbihalal Keluarga Besar Sekolah','Silaturahmi guru, staf, dan siswa pascalebaran.','Aula Sekolah','Yayasan &amp; Kepala Sekolah'],
-['2027-04-05','2027-05-28','penerimaan','Pendaftaran SPMB 2027/2028 Gelombang 2','Verifikasi berkas dan seleksi calon peserta didik baru.','Online &amp; Sekretariat','Panitia SPMB'],
-['2027-04-12','2027-04-23','akademik','Uji Kompetensi Keahlian (UKK) Kelas XII','Ujian praktik dan sertifikasi kompetensi bersama mitra industri.','Lab &amp; Bengkel','Kepala Program Keahlian'],
-['2027-04-21','','nasional','Peringatan Hari Kartini','Upacara dan kegiatan literasi tokoh perempuan.','Lapangan Sekolah','Kesiswaan'],
-['2027-04-26','2027-05-07','akademik','Ujian Sekolah Kelas XII','Ujian akhir untuk kelulusan peserta didik kelas XII.','Ruang Ujian','Panitia Ujian'],
-['2027-05-02','','nasional','Hari Pendidikan Nasional','Upacara dan refleksi pendidikan vokasi.','Lapangan Sekolah','Kesiswaan'],
-['2027-05-03','2027-05-28','akademik','PKL Kelas XI','Praktik kerja lapangan di mitra industri dan dunia usaha.','Mitra DUDI','Humas &amp; Hubin'],
-['2027-05-17','','nasional','Idul Adha &amp; Qurban Sekolah','Pelaksanaan qurban dan pembagian daging (menyesuaikan penetapan pemerintah).','Lingkungan Sekolah','Bidang Keagamaan'],
-['2027-06-05','','kegiatan','Pelepasan &amp; Wisuda Kelas XII','Perpisahan lulusan yang siap kerja, wirausaha, dan kuliah.','Aula / Gedung Baru','Panitia Wisuda'],
-['2027-06-07','2027-06-18','akademik','Sumatif Akhir Tahun &amp; Kenaikan Kelas','Penilaian akhir tahun pelajaran kelas X dan XI.','Ruang Kelas','Waka Kurikulum'],
-['2027-06-21','2027-06-25','penerimaan','Pengumuman &amp; Daftar Ulang Siswa Baru','Penetapan dan daftar ulang peserta didik baru 2027/2028.','Sekretariat SPMB','Panitia SPMB'],
-['2027-06-26','','ortu','Pembagian Rapor &amp; Rapat Akhir Tahun','Evaluasi tahun pelajaran bersama orang tua dan komite sekolah.','Aula Sekolah','Kepala Sekolah']
+['07-13','07-15','kegiatan',['MPLS Siswa Baru Kelas X','Grade X New Student Orientation (MPLS)'],['Pengenalan lingkungan sekolah, program keahlian, tata tertib, dan budaya CALM bagi peserta didik baru.','Introduction to the school, skill programs, rules, and the CALM culture for new students.'],'fh','wk'],
+['07-16','','akademik',['Hari Pertama Tahun Pelajaran Baru','First Day of the New School Year'],['Awal kegiatan belajar mengajar semester ganjil seluruh kelas X, XI, dan XII.','Start of the odd semester for Grades X, XI, and XII.'],'all','wc'],
+['07-18','','ortu',['Pertemuan Orang Tua Siswa Baru','New Parents Meeting'],['Sosialisasi program sekolah, tata tertib, dan perkenalan dengan wali kelas.','Briefing on school programs and rules, and an introduction to homeroom teachers.'],'hall','wk'],
+['08-14','08-17','nasional',['Peringatan HUT Kemerdekaan RI','Indonesian Independence Day'],['Lomba antarkelas dan upacara bendera 17 Agustus.','Inter-class competitions and the flag ceremony on August 17.'],'fld','os'],
+['08-22','','ortu',['Rapat Orang Tua & Komite Sekolah','Parents & School Committee Meeting'],['Penyampaian program kerja, anggaran, dan kesepakatan bersama tahun pelajaran.','Presentation of the work plan and budget, and agreements for the school year.'],'hall','kep'],
+['08-25','','nasional',['Peringatan Maulid Nabi Muhammad SAW','Maulid Nabi (Prophet\'s Birthday)'],['Tabligh akbar dan kegiatan keagamaan bersama seluruh warga sekolah.','A religious gathering for the whole school community.'],'mos','agm'],
+['09-09','','nasional',['Hari Olahraga Nasional','National Sports Day'],['Senam bersama dan pertandingan persahabatan antarkelas.','Group exercise and friendly inter-class matches.'],'fld','pjok'],
+['10-01','10-05','nasional',['Kesaktian Pancasila, Hari Batik & Hari Guru Sedunia','Pancasila Sanctity Day, Batik Day & World Teachers\' Day'],['Peringatan tanggal 1, 2, dan 5 Oktober dengan upacara dan kegiatan karakter.','Observed on October 1, 2, and 5 with ceremonies and character activities.'],'cmp','ks'],
+['10-22','','nasional',['Peringatan Hari Santri','National Santri Day'],['Apel dan kegiatan keagamaan sesuai nilai Yayasan Al-Musaddadiyah.','A ceremony and religious activities in line with the Al-Musaddadiyah Foundation.'],'fld','agm'],
+['10-26','11-06','akademik',['Sumatif Tengah Semester Ganjil','Odd Semester Midterm Assessment'],['Penilaian capaian belajar pertengahan semester untuk seluruh tingkat.','Mid-semester assessment of learning outcomes for all grades.'],'cls','wc'],
+['10-28','','nasional',['Hari Sumpah Pemuda','Youth Pledge Day'],['Upacara dan pentas kreativitas siswa.','A ceremony and student creative performances.'],'fld','osis'],
+['11-10','','nasional',['Peringatan Hari Pahlawan','Heroes\' Day'],['Upacara dan refleksi nilai perjuangan.','A ceremony and reflection on the values of the national struggle.'],'fld','ks'],
+['11-14','','ortu',['Laporan Hasil Sumatif Tengah Semester','Midterm Results Report'],['Informasi perkembangan belajar siswa kepada orang tua dan wali.','Updates on student progress for parents and guardians.'],'cm','wali'],
+['11-16','12-18','penerimaan',['Sosialisasi SPMB','Admissions Outreach (SPMB)'],['Kunjungan ke SMP/MTs dan promosi program keahlian. Daftar tunggu dibuka.','Visits to junior high schools and promotion of skill programs. The waiting list opens.'],'smp','spmb'],
+['11-25','','nasional',['Hari Guru Nasional','National Teachers\' Day'],['Penghormatan dan apresiasi kepada para guru.','Honoring and appreciating our teachers.'],'fld','osis'],
+['12-07','12-18','akademik',['Sumatif Akhir Semester Ganjil','Odd Semester Final Assessment'],['Penilaian akhir semester ganjil seluruh mata pelajaran.','End-of-semester assessment for all subjects.'],'cls','wc'],
+['12-19','','ortu',['Pembagian Rapor Semester Ganjil','Odd Semester Report Cards'],['Penyerahan rapor dan pertemuan wali kelas dengan orang tua.','Report card distribution and homeroom meetings with parents.'],'cm','wali'],
+['12-21','12-23','kegiatan',['Class Meeting & Pentas Karya','Class Meeting & Showcase'],['Lomba, pameran karya jurusan, dan penampilan seni.','Competitions, program project exhibitions, and arts performances.'],'fh','os'],
+['12-26','01-03','akademik',['Libur Semester Ganjil','Odd Semester Break'],['Libur pergantian semester.','Break between semesters.'],'none','none'],
+['01-04','','akademik',['Awal Semester Genap','Start of the Even Semester'],['Dimulainya kembali pembelajaran semester genap.','Classes resume for the even semester.'],'all','wc'],
+['01-11','03-26','penerimaan',['Pendaftaran SPMB Gelombang 1','Admissions (SPMB) Round 1'],['Pendaftaran online gratis. Calon siswa dari daftar tunggu mendapat prioritas.','Free online registration. Waiting-list applicants get priority.'],'onl','spmb'],
+['01-16','','nasional',['Peringatan Isra Mi\'raj','Isra Mi\'raj Commemoration'],['Kajian dan pembiasaan ibadah.','Religious study and worship practice.'],'mos','agm'],
+['02-08','03-05','kegiatan',['Pesantren Ramadan','Ramadan Program'],['Tadarus, kajian, dan berbagi takjil selama bulan Ramadan.','Quran recitation, study sessions, and sharing iftar snacks during Ramadan.'],'mos','agm'],
+['03-08','03-16','akademik',['Libur Idulfitri','Eid al-Fitr Break'],['Libur hari raya, menyesuaikan penetapan pemerintah.','Holiday break, following the government\'s official dates.'],'none','none'],
+['03-22','04-02','akademik',['Sumatif Tengah Semester Genap','Even Semester Midterm Assessment'],['Penilaian capaian belajar pertengahan semester genap.','Mid-semester assessment for the even semester.'],'cls','wc'],
+['04-05','','kegiatan',['Halalbihalal Keluarga Besar Sekolah','School Community Halalbihalal'],['Silaturahmi guru, staf, dan siswa pascalebaran.','A post-Eid gathering of teachers, staff, and students.'],'hall','yay'],
+['04-05','05-28','penerimaan',['Pendaftaran SPMB Gelombang 2','Admissions (SPMB) Round 2'],['Verifikasi berkas dan seleksi calon peserta didik baru.','Document verification and selection of new applicants.'],'onl','spmb'],
+['04-12','04-23','akademik',['Uji Kompetensi Keahlian (UKK) Kelas XII','Grade XII Skills Competency Test (UKK)'],['Ujian praktik dan sertifikasi kompetensi bersama mitra industri.','Practical exams and competency certification with industry partners.'],'lab','kap'],
+['04-21','','nasional',['Peringatan Hari Kartini','Kartini Day'],['Upacara dan kegiatan literasi tokoh perempuan.','A ceremony and literacy activities on women role models.'],'fld','ks'],
+['04-26','05-07','akademik',['Ujian Sekolah Kelas XII','Grade XII School Examination'],['Ujian akhir untuk kelulusan peserta didik kelas XII.','Final examinations for Grade XII graduation.'],'exr','uj'],
+['05-02','','nasional',['Hari Pendidikan Nasional','National Education Day'],['Upacara dan refleksi pendidikan vokasi.','A ceremony and reflection on vocational education.'],'fld','ks'],
+['05-03','05-28','akademik',['PKL Kelas XI','Grade XI Internship (PKL)'],['Praktik kerja lapangan di mitra industri dan dunia usaha.','On-the-job training at industry partners and businesses.'],'dudi','hum'],
+['05-17','','nasional',['Idul Adha & Qurban Sekolah','Eid al-Adha & School Qurban'],['Pelaksanaan qurban dan pembagian daging, menyesuaikan penetapan pemerintah.','Qurban sacrifice and meat distribution, following official dates.'],'cmp','agm'],
+['06-05','','kegiatan',['Pelepasan & Wisuda Kelas XII','Grade XII Farewell & Graduation'],['Perpisahan lulusan yang siap kerja, wirausaha, dan kuliah.','A farewell for graduates ready for careers, entrepreneurship, and college.'],'hall2','wis'],
+['06-07','06-18','akademik',['Sumatif Akhir Tahun & Kenaikan Kelas','Final Assessment & Grade Promotion'],['Penilaian akhir tahun pelajaran kelas X dan XI.','End-of-year assessment for Grades X and XI.'],'cls','wc'],
+['06-21','06-25','penerimaan',['Pengumuman & Daftar Ulang Siswa Baru','New Student Announcement & Re-registration'],['Penetapan dan daftar ulang peserta didik baru.','Announcement of accepted students and re-registration.'],'sec','spmb'],
+['06-26','','ortu',['Pembagian Rapor & Rapat Akhir Tahun','Report Cards & Year-End Meeting'],['Evaluasi tahun pelajaran bersama orang tua dan komite sekolah.','Year review with parents and the school committee.'],'hall','kep']
 ];
-var BL=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'],
-    BS=['JAN','FEB','MAR','APR','MEI','JUN','JUL','AGU','SEP','OKT','NOV','DES'];
-function P(s){var a=s.split('-');return new Date(+a[0],a[1]-1,+a[2])}
+var BL=[['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'],['January','February','March','April','May','June','July','August','September','October','November','December']],
+BS=[['JAN','FEB','MAR','APR','MEI','JUN','JUL','AGU','SEP','OKT','NOV','DES'],['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']];
 var T=new Date();T.setHours(0,0,0,0);
-var fc='all',fs='all',$=function(i){return document.getElementById(i)};
-EV.sort(function(a,b){return P(a[0])-P(b[0])});
-/* rutin */
-$('cxR').innerHTML=RT.map(function(r){return '<div class="cx-r"><time>'+r[0]+'<em>'+r[1]+'</em></time><div><b>'+r[2]+'</b><span>'+r[3]+'</span></div></div>'}).join('');
-/* statistik */
-var cnt=function(c){return EV.filter(function(e){return e[2]===c}).length};
-$('cxS').innerHTML=[[EV.length,'Agenda tahunan'],[cnt('akademik'),'Agenda akademik'],[cnt('ortu'),'Pertemuan orang tua'],[cnt('penerimaan'),'Tahap SPMB']].map(function(x){return '<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join('');
-/* agenda terdekat */
-var nx=EV.filter(function(e){return P(e[1]||e[0])>=T&&e[3].indexOf('Libur')<0})[0];
-if(nx){var s=P(nx[0]),run=s<=T,d=Math.round((s-T)/864e5);
- $('cxN').innerHTML='<div><small>'+(run?'Sedang berlangsung':'Agenda terdekat')+'</small><h3>'+nx[3]+'</h3><p>'+s.getDate()+' '+BL[s.getMonth()]+' '+s.getFullYear()+' · '+nx[5]+'</p></div><div class="cx-cd"><b>'+(run?'Hari ini':d)+'</b><span>'+(run?'agenda aktif':'hari lagi')+'</span></div>';
-}else $('cxN').style.display='none';
-/* filter */
-function pills(id,items,key){$(id).innerHTML=items.map(function(i,n){return '<button data-v="'+i[0]+'"'+(n?'':' class="on"')+'>'+i[1]+'</button>'}).join('');
- $(id).onclick=function(e){var b=e.target;if(b.tagName!=='BUTTON')return;[].forEach.call(this.children,function(x){x.className=''});b.className='on';if(key==='c')fc=b.getAttribute('data-v');else fs=b.getAttribute('data-v');draw()}}
-var ci=[['all','Semua']];for(var k in CAT)ci.push([k,CAT[k][0]]);
-pills('cxC',ci,'c');pills('cxM',[['all','Setahun'],['g','Ganjil'],['e','Genap']],'s');
-$('cxG').innerHTML=Object.keys(CAT).map(function(k){return '<span><i class="cx-dot" style="background:'+CAT[k][1]+'"></i>'+CAT[k][0]+'</span>'}).join('');
-/* render */
-function draw(){
+var SY=T.getMonth()>=6?T.getFullYear():T.getFullYear()-1;
+function D(md,sy){var a=md.split('-'),m=+a[0];return new Date(m>=7?sy:sy+1,m-1,+a[1])}
+function build(sy){return EV.map(function(e){return {e:e,s:D(e[0],sy),f:e[1]?D(e[1],sy):D(e[0],sy)}}).sort(function(a,b){return a.s-b.s})}
+var CY=build(SY),NY=build(SY+1);
+var u=function(k){return U[k][L]};
+function fmt(d){return L?BL[1][d.getMonth()]+' '+d.getDate():d.getDate()+' '+BL[0][d.getMonth()]}
+
+function render(){
+ $('cxEy').textContent=u('ey');$('cxH').innerHTML=u('h');$('cxP').textContent=u('p');
+ $('cxH1').textContent=u('h1');$('cxH2').textContent=u('h2');$('cxNt').textContent=u('nt');
+ $('cxT1').textContent=u('t1');$('cxT2').textContent=u('t2');$('cxA1').textContent=u('a1');
+ [].forEach.call($('cxLg').children,function(b){b.className=(+b.getAttribute('data-l')===L)?'on':''});
+ var cnt=function(c){return EV.filter(function(e){return e[2]===c}).length};
+ var sv=[EV.length,cnt('akademik'),cnt('ortu'),cnt('penerimaan')];
+ $('cxS').innerHTML=U.s.map(function(x,i){return '<div><b>'+sv[i]+'</b><span>'+x[L]+'</span></div>'}).join('');
+ /* agenda terdekat */
+ var nx=CY.concat(NY).filter(function(x){return x.f>=T&&x.e[3][0].indexOf('Libur')<0})[0];
+ if(nx){var run=nx.s<=T,d=Math.round((nx.s-T)/864e5);
+  $('cxN').style.display='';
+  $('cxN').innerHTML='<div><small>'+u(run?'run':'nx')+'</small><h3>'+nx.e[3][L]+'</h3><p>'+fmt(nx.s)+' · '+LC[nx.e[5]][L]+'</p></div><div class="cx-cd"><b>'+(run?u('today'):d)+'</b><span>'+u(run?'act':'dl')+'</span></div>';
+ }else $('cxN').style.display='none';
+ $('cxR').innerHTML=RT.map(function(r){return '<div class="cx-r"><time>'+r[0][L]+'<em>'+r[1][L]+'</em></time><div><b>'+r[2][L]+'</b><span>'+r[3][L]+'</span></div></div>'}).join('');
+ /* filter */
+ var cb='<button data-c="all"'+(fc==='all'?' class="on"':'')+'>'+u('all')+'</button>';
+ for(var k in CAT)cb+='<button data-c="'+k+'"'+(fc===k?' class="on"':'')+'>'+CAT[k][0][L]+'</button>';
+ $('cxC').innerHTML=cb;
+ $('cxM').innerHTML=[['all','yr'],['g','od'],['e','ev']].map(function(x){return '<button data-s="'+x[0]+'"'+(fs===x[0]?' class="on"':'')+'>'+u(x[1])+'</button>'}).join('');
+ $('cxG').innerHTML=Object.keys(CAT).map(function(k){return '<span><i class="cx-dot" style="background:'+CAT[k][1]+'"></i>'+CAT[k][0][L]+'</span>'}).join('');
+ /* kalender */
  var g={},o=[];
- EV.forEach(function(e){
-  var s=P(e[0]),m=s.getMonth(),y=s.getFullYear();
+ CY.forEach(function(x){
+  var e=x.e,m=x.s.getMonth(),odd=m>=6;
   if(fc!=='all'&&e[2]!==fc)return;
-  if(fs==='g'&&!(y===2026))return;if(fs==='e'&&!(y===2027))return;
-  var key=y+'-'+m;if(!g[key]){g[key]=[];o.push([key,y,m])}g[key].push(e);
+  if(fs==='g'&&!odd)return;if(fs==='e'&&odd)return;
+  if(!g[m]){g[m]=[];o.push(m)}g[m].push(x);
  });
- $('cxL').innerHTML=o.length?o.map(function(k){
-  var now=(k[1]===T.getFullYear()&&k[2]===T.getMonth());
-  return '<section class="cx-mo'+(now?' now':'')+'"><h4>'+BL[k[2]]+'<small>'+k[1]+'</small></h4><div>'+g[k[0]].map(function(e){
-   var s=P(e[0]),f=e[1]?P(e[1]):s,past=f<T,run=s<=T&&f>=T,seg=!past&&!run&&(s-T)/864e5<=14;
-   var dt=e[1]?'<i>s/d '+f.getDate()+' '+BS[f.getMonth()]+'</i>':'';
-   var bd=run?'<span class="cx-bd ber">Berlangsung</span>':seg?'<span class="cx-bd seg">Segera</span>':past?'<span class="cx-bd">Selesai</span>':'';
-   var meta=e[5]==='-'?'':'<div class="cx-m"><span>'+e[5]+'</span><span>'+e[6]+'</span></div>';
-   return '<article class="cx-e'+(past?' past':'')+'"><div class="cx-d"><b>'+s.getDate()+'</b><span>'+BS[s.getMonth()]+'</span>'+dt+'</div><div><div class="cx-t"><i class="cx-dot" style="background:'+CAT[e[2]][1]+'"></i><h5>'+e[3]+'</h5>'+bd+'</div><p>'+e[4]+'</p>'+meta+'</div></article>'
-  }).join('')+'</div></section>'}).join(''):'<p style="padding:40px 0;color:#6a7590">Tidak ada agenda untuk filter ini.</p>';
+ $('cxL').innerHTML=o.length?o.map(function(m){
+  var now=m===T.getMonth();
+  return '<section class="cx-mo'+(now?' now':'')+'"><h4>'+BL[L][m]+'<small>'+u(m>=6?'so':'se')+'</small>'+(now?'<em>'+u('nw')+'</em>':'')+'</h4><div>'+g[m].map(function(x){
+   var e=x.e,s=x.s,f=x.f,past=f<T,run=s<=T&&f>=T,seg=!past&&!run&&(s-T)/864e5<=14;
+   var dt=e[1]?'<i>'+u('to')+' '+f.getDate()+' '+BS[L][f.getMonth()]+'</i>':'';
+   var bd=run?'<span class="cx-bd ber">'+u('b1')+'</span>':seg?'<span class="cx-bd seg">'+u('b2')+'</span>':past?'<span class="cx-bd">'+u('b3')+'</span>':'';
+   var meta=e[5]==='none'?'':'<div class="cx-m"><span>'+LC[e[5]][L]+'</span><span>'+PC[e[6]][L]+'</span></div>';
+   return '<article class="cx-e'+(past?' past':'')+'"><div class="cx-d"><b>'+s.getDate()+'</b><span>'+BS[L][s.getMonth()]+'</span>'+dt+'</div><div><div class="cx-t"><i class="cx-dot" style="background:'+CAT[e[2]][1]+'"></i><h5>'+e[3][L]+'</h5>'+bd+'</div><p>'+e[4][L]+'</p>'+meta+'</div></article>'
+  }).join('')+'</div></section>'}).join(''):'<p style="padding:40px 0;color:#6a7590">'+u('em')+'</p>';
 }
-draw();
+$('cxLg').onclick=function(e){var b=e.target.getAttribute('data-l');if(b===null)return;L=+b;render()};
+$('cxC').onclick=function(e){var c=e.target.getAttribute('data-c');if(c===null)return;fc=c;render()};
+$('cxM').onclick=function(e){var s=e.target.getAttribute('data-s');if(s===null)return;fs=s;render()};
+render();
 })();
 </script>
